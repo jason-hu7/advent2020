@@ -18,3 +18,22 @@ def read_day3_inputs(filepath):
     with open(filepath, "r") as f:
         file = f.read().splitlines()
     return file
+
+
+def read_day4_inputs(filepath):
+    with open(filepath, "r") as f:
+        file = f.read().splitlines()
+
+    passports = []
+    passport = {}
+    for line in file:
+        if not line:
+            passports.append(passport)
+            passport = {}
+        else:
+            key_val_pairs = [key_val.split(":") for key_val in line.split(" ")]
+            for key, val in key_val_pairs:
+                passport[key] = val
+    if passport:
+        passports.append(passport)
+    return passports
