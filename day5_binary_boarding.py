@@ -66,3 +66,6 @@ if __name__ == "__main__":
         ids.append(get_id(row, col))
     print("part1", max(ids))
 
+    ids_len = len(ids)
+    missing_id = (min(ids)+max(ids))//2*(ids_len+1) - sum(ids)
+    print("part2", missing_id)
