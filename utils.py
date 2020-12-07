@@ -43,3 +43,20 @@ def read_day5_inputs(filepath):
     with open(filepath, "r") as f:
         file = f.read().splitlines()
     return file
+
+
+def read_day6_inputs(filepath):
+    with open(filepath, "r") as f:
+        file = f.read().splitlines()
+
+    groups = []
+    group = []
+    for line in file:
+        if not line:
+            groups.append(group)
+            group = []
+        else:
+            group.append(line)
+    if group:
+        groups.append(group)
+    return groups
