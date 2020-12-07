@@ -60,3 +60,9 @@ def read_day6_inputs(filepath):
     if group:
         groups.append(group)
     return groups
+
+
+def read_day7_inputs(filepath):
+    with open(filepath, "r") as f:
+        file = f.read().splitlines()
+    return file
