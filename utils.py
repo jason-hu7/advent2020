@@ -37,3 +37,9 @@ def read_day4_inputs(filepath):
     if passport:
         passports.append(passport)
     return passports
+
+
+def read_day5_inputs(filepath):
+    with open(filepath, "r") as f:
+        file = f.read().splitlines()
+    return file
