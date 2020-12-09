@@ -13,7 +13,7 @@ def two_sum(expenses, target=2020):
         else:
             seen.add(expense)
     print("no pairs")
-    return (None, None)
+    return None
 
 
 def three_sum(expenses, target=2020):

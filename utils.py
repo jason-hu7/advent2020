@@ -72,3 +72,10 @@ def read_day8_inputs(filepath):
     with open(filepath, "r") as f:
         file = f.read().splitlines()
     return file
+
+
+def read_day9_inputs(filepath):
+    with open(filepath, "r") as f:
+        file = f.read().splitlines()
+    file = [int(num) for num in file]
+    return file
